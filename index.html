@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DustySpecials is a simple catalogue library for weekly grocery specials."
+    />
+    <title>DustySpecials | Weekly grocery catalogues</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="DustySpecials home">DustySpecials</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+        >
+          Menu
+        </button>
+
+        <nav class="nav-menu" id="primary-menu" aria-label="Primary navigation">
+          <a href="#catalogues">Catalogues</a>
+          <a href="#about">About</a>
+          <a href="#" data-placeholder="Contact page will be added later.">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="container intro-inner">
+          <div class="intro-copy">
+            <h1 id="intro-title" class="sr-only">DustySpecials catalogue search</h1>
+            <p>
+              Compare weekly grocery specials across your favourite stores and
+              save money every time you shop.
+            </p>
+          </div>
+
+          <form class="search-panel" id="catalogue-search-form" role="search">
+            <label for="search-products">Search items</label>
+            <div class="search-row">
+              <input
+                id="search-products"
+                name="search"
+                type="search"
+                placeholder="e.g. milk, chicken, bread, rice"
+                autocomplete="off"
+              />
+              <button class="btn" type="submit">Search</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="catalogues-section" id="catalogues" aria-labelledby="catalogues-title">
+        <div class="container">
+          <div class="section-title">
+            <h2 id="catalogues-title">Retailer catalogue library</h2>
+          </div>
+
+          <div class="catalogue-grid" id="catalogue-grid" aria-live="polite"></div>
+
+          <div class="empty-state hidden" id="empty-state">
+            <h3>No matching items found</h3>
+            <p>Try searching for another product, brand, or grocery category.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="container about-inner">
+          <h2 id="about-title">About</h2>
+          <p>
+            DustySpecials is starting as a simple weekly catalogue library. The
+            first version keeps the interface focused: search for an item,
+            view matching retailer catalogues, and later open or download the PDF from
+            cloud storage.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="current-year"></span> DustySpecials</p>
+        <div class="footer-links">
+          <a href="#catalogues">Catalogues</a>
+          <a href="#" data-placeholder="Privacy Policy page will be added later.">Privacy</a>
+          <a href="#" data-placeholder="Terms page will be added later.">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
