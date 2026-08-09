@@ -4,6 +4,8 @@
   --green: #31475e;
   --green-dark: #243548;
   --orange: #b7663b;
+  --red: #cf2f2f;
+  --red-dark: #a92121;
   --charcoal: #2d2926;
   --muted: #746b61;
   --line: #e4e4e4;
@@ -65,10 +67,19 @@ input {
 }
 
 .brand {
-  color: var(--green);
+  color: var(--green-dark);
   font-size: 1.45rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+.brand::after {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 3px;
+  margin-top: 2px;
+  background: var(--red);
 }
 
 .nav-menu {
@@ -90,7 +101,7 @@ input {
 .nav-menu a:focus-visible,
 .nav-toggle:hover,
 .nav-toggle:focus-visible {
-  border-color: var(--line-dark);
+  border-color: var(--red);
   outline: none;
 }
 
@@ -189,24 +200,28 @@ h3 {
 }
 
 .search-row input:focus {
-  border-color: var(--green);
-  outline: 2px solid rgba(49, 71, 94, 0.16);
+  border-color: var(--red);
+  outline: 2px solid rgba(207, 47, 47, 0.16);
   outline-offset: 0;
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 44px;
   padding: 0 18px;
-  border: 1px solid var(--green-dark);
-  background: var(--green);
+  border: 1px solid var(--red-dark);
+  background: var(--red);
   color: #fff;
   font-weight: 700;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn:hover,
 .btn:focus-visible {
-  background: var(--green-dark);
+  background: var(--red-dark);
   outline: none;
 }
 
@@ -228,7 +243,7 @@ h3 {
 .section-title {
   margin-bottom: 18px;
   padding-bottom: 12px;
-  border-bottom: 2px solid var(--green);
+  border-bottom: 2px solid var(--red);
 }
 
 .catalogue-grid {
@@ -240,7 +255,7 @@ h3 {
 }
 
 .catalogue-card {
-  min-height: 190px;
+  min-height: 252px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: var(--paper);
@@ -253,8 +268,52 @@ h3 {
 }
 
 .catalogue-content p {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   color: var(--muted);
+}
+
+.pdf-preview {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 74px;
+  margin: 0 0 14px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, transparent 0 78%, #f0f0f0 78%),
+    #fafafa;
+}
+
+.pdf-page {
+  position: absolute;
+  width: 46px;
+  height: 58px;
+  border: 2px solid var(--red);
+  background: #fff;
+}
+
+.pdf-page::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  width: 14px;
+  height: 14px;
+  border-left: 2px solid var(--red);
+  border-bottom: 2px solid var(--red);
+  background: #f7dede;
+}
+
+.pdf-label {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  padding: 2px 8px;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 .catalogue-actions {
@@ -318,7 +377,7 @@ h3 {
 
 .footer-links a:hover,
 .footer-links a:focus-visible {
-  color: var(--green);
+  color: var(--red);
   outline: none;
 }
 

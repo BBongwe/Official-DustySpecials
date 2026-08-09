@@ -5,21 +5,33 @@ const catalogues = [
   {
     retailer: "SPAR",
     dates: "15 Jul 2026 - 26 Jul 2026",
+    pdfUrl: "catalogues/spar.pdf",
+    fileName: "spar.pdf",
+    coverImage: "images/spar-cover.jpg",
     items: ["Albany Brown Bread", "Sunflower Oil", "Basmati Rice", "Apples", "Toilet Paper"],
   },
   {
     retailer: "Checkers",
     dates: "15 Jul 2026 - 26 Jul 2026",
+    pdfUrl: "catalogues/checkers.pdf",
+    fileName: "checkers.pdf",
+    coverImage: "images/checkers-cover.jpg",
     items: ["Clover Fresh Milk", "Beef Mince", "Omo Washing Powder", "Pasta", "Frozen Chips"],
   },
   {
     retailer: "Pick n Pay",
     dates: "15 Jul 2026 - 26 Jul 2026",
+    pdfUrl: "catalogues/picnpay.pdf",
+    fileName: "picnpay.pdf",
+    coverImage: "images/picnpay-cover.jpg",
     items: ["Long Life Milk", "Chicken Portions", "Potatoes", "Eggs", "Rice"],
   },
   {
     retailer: "Woolworths",
     dates: "15 Jul 2026 - 26 Jul 2026",
+    pdfUrl: "catalogues/woolworths-kzn.pdf", // Changed to strict lowercase, no spaces
+    fileName: "woolworths-kzn.pdf",
+    coverImage: "images/woolworths-cover.jpg",
     items: ["Baby Spinach", "Butter Croissants", "Frozen Mixed Vegetables", "Yoghurt", "Coffee"],
   },
 ];
@@ -64,13 +76,17 @@ function renderCatalogues() {
           <div class="catalogue-content">
             <h3>${catalogue.retailer}</h3>
             <p>${catalogue.dates}</p>
+            <div class="pdf-preview" aria-hidden="true">
+              <!-- Replaced the empty span with an actual image tag pointing to your images folder -->
+              <img src="${catalogue.coverImage}" alt="${catalogue.retailer} catalogue cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;" />
+            </div>
             <div class="catalogue-actions">
-              <button class="btn" type="button" data-placeholder="${catalogue.retailer} catalogue viewer will be added later.">
+              <a class="btn" href="${catalogue.pdfUrl}" target="_blank" rel="noopener">
                 View Catalogue
-              </button>
-              <button class="btn btn-secondary" type="button" data-placeholder="${catalogue.retailer} PDF download will connect to Amazon S3 later.">
+              </a>
+              <a class="btn btn-secondary" href="${catalogue.pdfUrl}" download="${catalogue.fileName}">
                 Download PDF
-              </button>
+              </a>
             </div>
           </div>
         </article>
