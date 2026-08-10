@@ -5,7 +5,7 @@ const catalogues = [
     dates: "15 Jul 2026 - 26 Jul 2026",
     pdfUrl: "catalogues/spar.pdf",
     fileName: "spar.pdf",
-    coverImage: "images/IMG_0037.jpg",
+    coverImage: "images/spar-cover.jpg",
     items: ["Albany Brown Bread", "Sunflower Oil", "Basmati Rice", "Apples", "Toilet Paper"],
   },
   {
@@ -13,7 +13,7 @@ const catalogues = [
     dates: "15 Jul 2026 - 26 Jul 2026",
     pdfUrl: "catalogues/checkers.pdf",
     fileName: "checkers.pdf",
-    coverImage: "images/IMG_0037.jpg",
+    coverImage: "images/chechers-cover.jpg",
     items: ["Clover Fresh Milk", "Beef Mince", "Omo Washing Powder", "Pasta", "Frozen Chips"],
   },
   {
@@ -21,7 +21,7 @@ const catalogues = [
     dates: "15 Jul 2026 - 26 Jul 2026",
     pdfUrl: "catalogues/picnpay.pdf",
     fileName: "picnpay.pdf",
-    coverImage: "images/IMG_0037.jpg",
+    coverImage: "images/picnpay-cover.jpg",
     items: ["Long Life Milk", "Chicken Portions", "Potatoes", "Eggs", "Rice"],
   },
   {
@@ -29,7 +29,7 @@ const catalogues = [
     dates: "15 Jul 2026 - 26 Jul 2026",
     pdfUrl: "catalogues/woolworths-kzn.pdf",
     fileName: "woolworths-kzn.pdf",
-    coverImage: "images/IMG_0037.jpg",
+    coverImage: "images/woolworths-cover.jpg",
     items: ["Baby Spinach", "Butter Croissants", "Frozen Mixed Vegetables", "Yoghurt", "Coffee"],
   },
 ];
