@@ -13,7 +13,7 @@ const catalogues = [
     dates: "15 Jul 2026 - 26 Jul 2026",
     pdfUrl: "catalogues/checkers.pdf",
     fileName: "checkers.pdf",
-    coverImage: "images/chechers-cover.jpg",
+    coverImage: "images/checkers-cover.jpg",
     items: ["Clover Fresh Milk", "Beef Mince", "Omo Washing Powder", "Pasta", "Frozen Chips"],
   },
   {
