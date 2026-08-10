@@ -88,8 +88,7 @@ input {
   gap: 2px;
 }
 
-.nav-menu a,
-.nav-toggle {
+.nav-menu a {
   padding: 8px 12px;
   border: 1px solid transparent;
   color: #3f3a35;
@@ -98,16 +97,69 @@ input {
 }
 
 .nav-menu a:hover,
-.nav-menu a:focus-visible,
-.nav-toggle:hover,
-.nav-toggle:focus-visible {
+.nav-menu a:focus-visible {
   border-color: var(--red);
   outline: none;
 }
 
+/* Burger Menu Toggle Button */
 .nav-toggle {
   display: none;
+  padding: 8px;
+  border: none;
+  background: transparent;
   cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger-box {
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+  position: relative;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 24px;
+  height: 2px;
+  background-color: var(--charcoal);
+  position: absolute;
+  transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease;
+}
+
+.hamburger-inner {
+  top: 8px;
+}
+
+.hamburger-inner::before {
+  content: "";
+  top: -8px;
+  left: 0;
+}
+
+.hamburger-inner::after {
+  content: "";
+  top: 8px;
+  left: 0;
+}
+
+/* Active Hamburger state (Transforms to X) */
+.nav-toggle[aria-expanded="true"] .hamburger-inner {
+  background-color: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger-inner::before {
+  top: 0;
+  transform: rotate(45deg);
+  background-color: var(--red);
+}
+
+.nav-toggle[aria-expanded="true"] .hamburger-inner::after {
+  top: 0;
+  transform: rotate(-45deg);
+  background-color: var(--red);
 }
 
 .intro {
@@ -209,14 +261,16 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   min-height: 44px;
-  padding: 0 18px;
+  padding: 0 16px;
   border: 1px solid var(--red-dark);
   background: var(--red);
   color: #fff;
   font-weight: 700;
   cursor: pointer;
   text-align: center;
+  white-space: nowrap;
 }
 
 .btn:hover,
@@ -234,6 +288,12 @@ h3 {
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
   background: var(--tint);
+}
+
+.btn-icon-only {
+  width: 44px;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .catalogues-section {
@@ -265,6 +325,7 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 16px;
+  height: 100%;
 }
 
 .catalogue-content p {
@@ -276,50 +337,21 @@ h3 {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 74px;
+  min-height: 110px;
   margin: 0 0 14px;
   border: 1px solid var(--line);
-  background:
-    linear-gradient(135deg, transparent 0 78%, #f0f0f0 78%),
-    #fafafa;
-}
-
-.pdf-page {
-  position: absolute;
-  width: 46px;
-  height: 58px;
-  border: 2px solid var(--red);
-  background: #fff;
-}
-
-.pdf-page::after {
-  content: "";
-  position: absolute;
-  right: -2px;
-  top: -2px;
-  width: 14px;
-  height: 14px;
-  border-left: 2px solid var(--red);
-  border-bottom: 2px solid var(--red);
-  background: #f7dede;
-}
-
-.pdf-label {
-  position: relative;
-  z-index: 1;
-  margin-top: 18px;
-  padding: 2px 8px;
-  background: var(--red);
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  background: #fafafa;
+  overflow: hidden;
 }
 
 .catalogue-actions {
-  display: grid;
+  display: flex;
   gap: 8px;
   margin-top: auto;
+}
+
+.catalogue-actions .btn-main {
+  flex: 1;
 }
 
 .empty-state {
@@ -389,11 +421,11 @@ h3 {
   .intro-inner,
   .about-inner {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 20px;
   }
 
   .intro-inner {
-    padding: 24px 0;
+    padding: 20px 0;
   }
 
   .catalogue-grid {
@@ -407,30 +439,32 @@ h3 {
   }
 
   .container {
-    width: min(100% - 24px, var(--container));
+    width: min(100% - 20px, var(--container));
   }
 
   .brand {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .nav-toggle {
-    display: inline-block;
-    min-height: 42px;
+    display: block;
   }
 
   .nav-menu {
     position: fixed;
-    top: 60px;
-    left: 12px;
-    right: 12px;
-    display: grid;
+    top: 61px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
     gap: 0;
-    border: 1px solid var(--line);
     background: var(--paper);
-    transform: translateY(-8px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    transform: translateY(-10px);
     opacity: 0;
     pointer-events: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
   .nav-menu.active {
@@ -440,45 +474,50 @@ h3 {
   }
 
   .nav-menu a {
-    padding: 14px 12px;
+    padding: 16px 20px;
     border-bottom: 1px solid var(--line);
-  }
-
-  .intro-inner {
-    padding: 20px 0;
-  }
-
-  h1 {
-    font-size: clamp(2.45rem, 14vw, 3.4rem);
-  }
-
-  .intro-copy p {
     font-size: 1.05rem;
   }
 
+  .intro-inner {
+    padding: 16px 0;
+  }
+
+  .intro-copy p {
+    font-size: 1rem;
+  }
+
+  /* Compact Search Row on Mobile */
   .search-panel {
-    padding: 14px;
+    padding: 12px;
+  }
+
+  .search-panel label {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
   }
 
   .search-row {
-    display: grid;
+    display: flex;
+    gap: 6px;
   }
 
-  .search-row input,
-  .btn {
-    min-height: 48px;
+  .search-row input {
+    height: 42px;
+    font-size: 0.95rem;
+  }
+
+  .btn-search {
+    min-height: 42px;
+    padding: 0 12px;
+  }
+
+  .search-btn-text {
+    display: none; /* Icon only on mobile */
   }
 
   .catalogues-section {
-    padding: 24px 0 30px;
-  }
-
-  .catalogue-card {
-    min-height: auto;
-  }
-
-  .catalogue-content {
-    padding: 18px;
+    padding: 20px 0 28px;
   }
 
   .catalogue-grid {
@@ -486,29 +525,38 @@ h3 {
   }
 
   .catalogue-content {
-    padding: 14px;
+    padding: 10px;
   }
 
   .catalogue-content h3 {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
   }
 
   .catalogue-content p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
   }
 
+  .pdf-preview {
+    min-height: 90px;
+    margin-bottom: 8px;
+  }
+
+  /* Compact horizontal buttons for card action */
   .catalogue-actions {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 6px;
   }
 
   .catalogue-actions .btn {
-    padding: 0 10px;
-    font-size: 0.92rem;
+    min-height: 38px;
+    font-size: 0.82rem;
+    padding: 0 8px;
   }
 
-  .section-title,
   .footer-inner {
-    align-items: start;
+    padding: 16px 0;
     flex-direction: column;
+    gap: 12px;
   }
 }
