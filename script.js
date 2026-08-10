@@ -1,13 +1,11 @@
-// DustySpecials MVP.
-// The current version is intentionally catalogue-first and simple. These
-// records can later be replaced by an API response from AWS.
+// DustySpecials MVP
 const catalogues = [
   {
     retailer: "SPAR",
     dates: "15 Jul 2026 - 26 Jul 2026",
     pdfUrl: "catalogues/spar.pdf",
     fileName: "spar.pdf",
-    coverImage: "images/spar-cover.jpg",
+    coverImage: "images/IMG_0037.jpg",
     items: ["Albany Brown Bread", "Sunflower Oil", "Basmati Rice", "Apples", "Toilet Paper"],
   },
   {
@@ -15,7 +13,7 @@ const catalogues = [
     dates: "15 Jul 2026 - 26 Jul 2026",
     pdfUrl: "catalogues/checkers.pdf",
     fileName: "checkers.pdf",
-    coverImage: "images/checkers-cover.jpg",
+    coverImage: "images/IMG_0037.jpg",
     items: ["Clover Fresh Milk", "Beef Mince", "Omo Washing Powder", "Pasta", "Frozen Chips"],
   },
   {
@@ -23,15 +21,15 @@ const catalogues = [
     dates: "15 Jul 2026 - 26 Jul 2026",
     pdfUrl: "catalogues/picnpay.pdf",
     fileName: "picnpay.pdf",
-    coverImage: "images/picnpay-cover.jpg",
+    coverImage: "images/IMG_0037.jpg",
     items: ["Long Life Milk", "Chicken Portions", "Potatoes", "Eggs", "Rice"],
   },
   {
     retailer: "Woolworths",
     dates: "15 Jul 2026 - 26 Jul 2026",
-    pdfUrl: "catalogues/woolworths-kzn.pdf", // Changed to strict lowercase, no spaces
+    pdfUrl: "catalogues/woolworths-kzn.pdf",
     fileName: "woolworths-kzn.pdf",
-    coverImage: "images/woolworths-cover.jpg",
+    coverImage: "images/IMG_0037.jpg",
     items: ["Baby Spinach", "Butter Croissants", "Frozen Mixed Vegetables", "Yoghurt", "Coffee"],
   },
 ];
@@ -76,16 +74,19 @@ function renderCatalogues() {
           <div class="catalogue-content">
             <h3>${catalogue.retailer}</h3>
             <p>${catalogue.dates}</p>
-            <div class="pdf-preview" aria-hidden="true">
-              <!-- Replaced the empty span with an actual image tag pointing to your images folder -->
-              <img src="${catalogue.coverImage}" alt="${catalogue.retailer} catalogue cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;" />
+            <div class="pdf-preview">
+              <img src="${catalogue.coverImage}" alt="${catalogue.retailer} catalogue cover" style="width: 100%; height: 100%; object-fit: cover;" />
             </div>
             <div class="catalogue-actions">
-              <a class="btn" href="${catalogue.pdfUrl}" target="_blank" rel="noopener">
-                View Catalogue
+              <a class="btn btn-main" href="${catalogue.pdfUrl}" target="_blank" rel="noopener">
+                View
               </a>
-              <a class="btn btn-secondary" href="${catalogue.pdfUrl}" download="${catalogue.fileName}">
-                Download PDF
+              <a class="btn btn-secondary btn-icon-only" href="${catalogue.pdfUrl}" download="${catalogue.fileName}" aria-label="Download ${catalogue.retailer} PDF">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
               </a>
             </div>
           </div>
