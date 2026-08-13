@@ -14,7 +14,7 @@ const catalogues = [
     pdfUrl: "catalogues/checkers.pdf",
     fileName: "checkers.pdf",
     coverImage: "images/checkers-cover.jpg",
-    items: ["Clover Fresh Milk", "Beef Mince", "Omo Washing Powder", "Pasta", "Frozen Chips"],
+    items: ["Black Cat", "Peanut Butter", "Chicken", "Viennas", "Sunlight", "Liquid", "Doritos", "Snacks", "Cold Drink", "Soft Drink", "Kit Kat", "Chocolate Bars", "Danone", "Double Cream", "Yoghurt", "Bokomo", "Weet-Bix", "Coffee", "Douwe Egberts"]
   },
   {
     retailer: "Pick n Pay",
