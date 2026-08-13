@@ -2,7 +2,7 @@
 const catalogues = [
   {
     retailer: "SPAR",
-    dates: "15 Jul 2026 - 26 Jul 2026",
+    dates: "11 Jul 2026 - 23 Aug 2026",
     pdfUrl: "catalogues/spar.pdf",
     fileName: "spar.pdf",
     coverImage: "images/spar-cover.jpg",
@@ -10,7 +10,7 @@ const catalogues = [
   },
   {
     retailer: "Checkers",
-    dates: "15 Jul 2026 - 26 Jul 2026",
+    dates: "11 Aug 2026 - 19 Aug 2026",
     pdfUrl: "catalogues/checkers.pdf",
     fileName: "checkers.pdf",
     coverImage: "images/checkers-cover.jpg",
@@ -18,7 +18,7 @@ const catalogues = [
   },
   {
     retailer: "Pick n Pay",
-    dates: "15 Jul 2026 - 26 Jul 2026",
+    dates: "7 Aug 2026 - 24 Aug 2026",
     pdfUrl: "catalogues/picnpay.pdf",
     fileName: "picnpay.pdf",
     coverImage: "images/picnpay-cover.jpg",
@@ -26,7 +26,7 @@ const catalogues = [
   },
   {
     retailer: "Woolworths",
-    dates: "15 Jul 2026 - 26 Jul 2026",
+    dates: "3 Aug 2026 - 23 Aug 2026",
     pdfUrl: "catalogues/woolworths-kzn.pdf",
     fileName: "woolworths-kzn.pdf",
     coverImage: "images/woolworths-cover.jpg",
