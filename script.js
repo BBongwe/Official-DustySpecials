@@ -2,7 +2,7 @@
 const catalogues = [
   {
     retailer: "SPAR",
-    dates: "11 Jul 2026 - 23 Aug 2026",
+    dates: "11 Aug 2026 - 23 Aug 2026",
     pdfUrl: "catalogues/spar.pdf",
     fileName: "spar.pdf",
     coverImage: "images/spar-cover.jpg",
