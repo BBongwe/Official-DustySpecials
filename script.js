@@ -48,6 +48,10 @@ function cacheElements() {
   elements.catalogueGrid = document.querySelector("#catalogue-grid");
   elements.emptyState = document.querySelector("#empty-state");
   elements.currentYear = document.querySelector("#current-year");
+  elements.privacyLink = document.querySelector("#privacy-link");
+  elements.termsLink = document.querySelector("#terms-link");
+  elements.privacyModal = document.querySelector("#privacy-modal");
+  elements.termsModal = document.querySelector("#terms-modal");
 }
 
 function getFilteredCatalogues() {
@@ -96,6 +100,20 @@ function renderCatalogues() {
     .join("");
 }
 
+function openModal(modalElement) {
+  if (!modalElement) return;
+  modalElement.classList.remove("hidden");
+  modalElement.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(modalElement) {
+  if (!modalElement) return;
+  modalElement.classList.add("hidden");
+  modalElement.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
 function bindEvents() {
   elements.navToggle.addEventListener("click", () => {
     const isOpen = elements.navMenu.classList.toggle("active");
@@ -104,7 +122,7 @@ function bindEvents() {
   });
 
   elements.navMenu.addEventListener("click", (event) => {
-    if (event.target.matches("a")) {
+    if (event.target.matches("a") && !event.target.hasAttribute("data-placeholder")) {
       elements.navMenu.classList.remove("active");
       document.body.classList.remove("nav-open");
       elements.navToggle.setAttribute("aria-expanded", "false");
@@ -121,18 +139,37 @@ function bindEvents() {
     renderCatalogues();
   });
 
-  document.addEventListener("click", (event) => {
-    const placeholderElement = event.target.closest("[data-placeholder]");
+  // Privacy & Terms Modal Triggers
+  elements.privacyLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    openModal(elements.privacyModal);
+  });
 
-    if (!placeholderElement) {
+  elements.termsLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    openModal(elements.termsModal);
+  });
+
+  // Modal Close via Close Button or Overlay Click
+  document.addEventListener("click", (event) => {
+    const closeBtn = event.target.closest("[data-close-modal]");
+    if (closeBtn) {
+      const modalId = closeBtn.dataset.closeModal;
+      closeModal(document.getElementById(modalId));
       return;
     }
 
-    if (placeholderElement.getAttribute("href") === "#") {
-      event.preventDefault();
+    if (event.target.classList.contains("modal-overlay")) {
+      closeModal(event.target);
     }
+  });
 
-    alert(placeholderElement.dataset.placeholder);
+  // Modal Close via Escape Key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeModal(elements.privacyModal);
+      closeModal(elements.termsModal);
+    }
   });
 }
 
