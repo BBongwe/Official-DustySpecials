@@ -6,7 +6,7 @@ const catalogues = [
     pdfUrl: "catalogues/spar.pdf",
     fileName: "spar.pdf",
     coverImage: "images/spar-cover.jpg",
-    items: ["Albany Brown Bread", "Sunflower Oil", "Basmati Rice", "Apples", "Toilet Paper"],
+    items: ["danone", "yoghurt", "dog food", "tissue", "toilet rolls", "polony", "Cadbury", "lunch bar", "chocolate", "soap", "dettol"],
   },
   {
     retailer: "Checkers",
@@ -14,7 +14,7 @@ const catalogues = [
     pdfUrl: "catalogues/checkers.pdf",
     fileName: "checkers.pdf",
     coverImage: "images/checkers-cover.jpg",
-    items: ["Black Cat", "Peanut Butter", "Chicken", "Viennas", "Sunlight", "Liquid", "Doritos", "Snacks", "Cold Drink", "Soft Drink", "Kit Kat", "Chocolate Bars", "Danone", "Double Cream", "Yoghurt", "Bokomo", "Weet-Bix", "Coffee", "Douwe Egberts"]
+    items: ["weet bix", "cereal", "coffee", "milk", "meat", "chicken", "beef", "eggs", "potatoes", "wine", "alcohol", "red label", "seafood", "fish", "chicken breast", "bread", "loaf", "fish fingers", "Krush", "clover", "ice cream", "Fanta", "water", "lays", "snacks", "polony", "mixed vegetables", "sweets", "chocolate", "slab", "nik naks", "koo", "beans", "biscuits", "peanut butter", "tomato sauce", "mayonnaise", "purity", "soups", "noodles", "rusks", "tuna", "cooking oil", "oil", "rice", "spice", "Maggi", "tennis", "joke", "lotion", "spaghetti", "shampoo", "fabric softener", "towels", "doom", "handy Andy", "dog food", "roll on"]
   },
   {
     retailer: "Pick n Pay",
@@ -22,7 +22,7 @@ const catalogues = [
     pdfUrl: "catalogues/picnpay.pdf",
     fileName: "picnpay.pdf",
     coverImage: "images/picnpay-cover.jpg",
-    items: ["Long Life Milk", "Chicken Portions", "Potatoes", "Eggs", "Rice"],
+    items: ["chicken", "drumsticks", "thighs", "lancewood", "cheese", "Jacobs", "coffee", "Doritos", "auto", "washing powder", "detergent", "air fryer", "Philips", "eggs", "bread", "milk", "tissue", "maize meal", "tastic", "rice", "mince", "ground beef", "lamb", "braai", "pork chops", "wors", "full chicken", "skinless", "breasts", "stir fry", "sasko", "vegetables", "cake", "burger", "Russians", "chips", "pizza", "soup", "cheese", "blue cheese", "Vienna", "bacon", "polony", "seafood", "margarine", "stock", "yoghurt", "juice", "braai pack", "fish", "ice cream", "pros", "snacks", "beans", "too", "tomato sauce", "sugar", "deodorant", "Colgate", "toothpaste", "sunlight", "dog food", "oven", "kettle", "mug", "batteries", "paper", "liquor"],
   },
   {
     retailer: "Woolworths",
@@ -30,7 +30,7 @@ const catalogues = [
     pdfUrl: "catalogues/woolworths-kzn.pdf",
     fileName: "woolworths-kzn.pdf",
     coverImage: "images/woolworths-cover.jpg",
-    items: ["Baby Spinach", "Butter Croissants", "Frozen Mixed Vegetables", "Yoghurt", "Coffee"],
+    items: ["wors", "pasta", "cheddar", "macaroni", "Jacobs coffee", "coffee", "baby soft", "tissue", "plain yoghurt", "flowers", "apples", "mushrooms", "vegetables", "salad", "tomato", "tomatoes", "lamb", "meatballs", "chicken", "drumsticks", "salmon", "salami", "roti", "lasagne", "burrito", "Italian", "prepared", "meals", "crumbed chicken", "nuggets", "butter", "spread", "stock", "sourdough", "tiramisu", "carrot cake", "100% juice", "sparkling", "drinks", "Coca Cola", "spring water", "basmati rice", "rice", "olive oil", "ketchup", "futurelife", "cereal", "oats", "wine", "pretzels", "chips", "charcoal", "refuse bags", "Lindt", "chocolate", "skip", "laundry powder", "wipes", "dog food", "tin roof", "canned tomatoes"],
   },
 ];
 
