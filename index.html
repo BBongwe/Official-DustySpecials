@@ -107,11 +107,49 @@
         <p>&copy; <span id="current-year"></span> DustySpecials</p>
         <div class="footer-links">
           <a href="#catalogues">Catalogues</a>
-          <a href="#" data-placeholder="Privacy Policy page will be added later.">Privacy</a>
-          <a href="#" data-placeholder="Terms page will be added later.">Terms</a>
+          <a href="#" id="privacy-link">Privacy</a>
+          <a href="#" id="terms-link">Terms</a>
         </div>
       </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal-overlay hidden" id="privacy-modal" aria-hidden="true" role="dialog" aria-labelledby="privacy-title">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2 id="privacy-title">Privacy Policy</h2>
+          <button class="modal-close" type="button" aria-label="Close Privacy Policy" data-close-modal="privacy-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Data Collection:</strong> This website does not intentionally track, collect, or store personal user data or telemetry for commercial use.</p>
+          <p><strong>Local Storage:</strong> Any user-defined features (such as grocery lists or saved loyalty card numbers) are stored locally within your own browser session or device and are not uploaded or harvested by the creator.</p>
+          <p><strong>Third-Party Hosting:</strong> The site is hosted securely via cloud infrastructure (AWS), which standardly logs anonymous server traffic (such as IP addresses and browser types) solely for performance and security monitoring.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms of Use Modal -->
+    <div class="modal-overlay hidden" id="terms-modal" aria-hidden="true" role="dialog" aria-labelledby="terms-title">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2 id="terms-title">Terms of Use</h2>
+          <button class="modal-close" type="button" aria-label="Close Terms of Use" data-close-modal="terms-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-date"><strong>Last Updated:</strong> August 2026</p>
+          
+          <h3>1. Nature of the Project</h3>
+          <p>DustySpecials is an independent, non-commercial personal portfolio project created solely for educational purposes and to demonstrate cloud engineering competencies. It is not affiliated with, endorsed by, or officially connected to Spar, Woolworths, Pick n Pay, Checkers, or any other retail brand mentioned.</p>
+
+          <h3>2. Content & Trademark Notice</h3>
+          <p>All supermarket logos, trademarks, and catalogue materials belong to their respective copyright and trademark holders. Supermarket specials, prices, and promotional documents are sourced and displayed for educational price-comparison simulation only.</p>
+          <p><em>Retailer Compliance Note:</em> I respect the intellectual property and rights of all retail brands. If you are a representative of any featured retailer and wish for specific specials, catalogues, or references to be removed, please contact me immediately, and they will be taken down without delay.</p>
+
+          <h3>3. Limitation of Liability</h3>
+          <p>Because this is a portfolio and learning project, information (including prices, dates, and product availability) may occasionally be outdated, manually entered, or inaccurate. Users should verify prices directly with the respective retailers before making purchasing decisions. The creator assumes no financial or legal liability for any reliance placed on the data provided on this site.</p>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
