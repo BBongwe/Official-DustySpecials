@@ -104,14 +104,19 @@ function openModal(modalElement) {
   if (!modalElement) return;
   modalElement.classList.remove("hidden");
   modalElement.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
+  document.body.classList.add("modal-open");
+
+  // Ensure scroll is at top when opening
+  const modalBody = modalElement.querySelector(".modal-body");
+  if (modalBody) modalBody.scrollTop = 0;
+  modalElement.scrollTop = 0;
 }
 
 function closeModal(modalElement) {
   if (!modalElement) return;
   modalElement.classList.add("hidden");
   modalElement.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
+  document.body.classList.remove("modal-open");
 }
 
 function bindEvents() {
