@@ -10,7 +10,7 @@ const catalogues = [
   },
   {
     retailer: "Checkers",
-    dates: "11 Aug 2026 - 19 Aug 2026",
+    dates: "20 Aug 2026 - 06 Sept 2026",
     pdfUrl: "catalogues/checkers.pdf",
     fileName: "checkers.pdf",
     coverImage: "images/checkers-cover.jpg",
