@@ -1,7 +1,7 @@
 [
   {
     "retailer": "SPAR",
-    "dates": "7 Oct - 18 Oct 2026",
+    "dates": "19 Oct - 08 Nov 2026",
     "pdfUrl": "catalogues/spar.pdf",
     "fileName": "spar.pdf",
     "coverImage": "images/spar-cover.jpg",
@@ -21,7 +21,7 @@
   },
   {
     "retailer": "Checkers",
-    "dates": "12 Oct - 18 Oct 2026",
+    "dates": "19 Oct - 08 Nov 2026",
     "pdfUrl": "catalogues/checkers.pdf",
     "fileName": "checkers.pdf",
     "coverImage": "images/checkers-cover.jpg",
@@ -88,7 +88,7 @@
   },
   {
     "retailer": "Pick n Pay",
-    "dates": "7 Oct - 22 Oct 2026",
+    "dates": "1 Oct - 31 Oct 2026",
     "pdfUrl": "catalogues/picnpay.pdf",
     "fileName": "picnpay.pdf",
     "coverImage": "images/picnpay-cover.jpg",
@@ -165,7 +165,7 @@
   },
   {
     "retailer": "Woolworths",
-    "dates": "5 Oct - 25 Oct 2026",
+    "dates": "1 Oct - 31 Oct 2026",
     "pdfUrl": "catalogues/woolworths-kzn.pdf",
     "fileName": "woolworths-kzn.pdf",
     "coverImage": "images/woolworths-cover.jpg",
