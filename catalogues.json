@@ -20,7 +20,7 @@
     ]
   },
   {
-    "retailer": "Checkers",
+    "retailer": "Checkers Black Friday",
     "dates": "26 Nov - 29 Nov 2026",
     "pdfUrl": "catalogues/checkers.pdf",
     "fileName": "checkers.pdf",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "retailer": "Pick n Pay",
+    "retailer": "Pick n Pay Black Friday",
     "dates": "26 Nov - 29 Nov 2026",
     "pdfUrl": "catalogues/picnpay.pdf",
     "fileName": "picnpay.pdf",
@@ -829,16 +829,16 @@
     ]
   },
   {
-    "retailer": "Checkerslater",
-    "dates": "1 Nov - 31 Nov 2026",
+    "retailer": "Checkers",
+    "dates": "23 Nov - 06 Dec 2026",
     "pdfUrl": "catalogues/checkerslater.pdf",
     "fileName": "checkerslater.pdf",
     "coverImage": "images/checkerslater-cover.jpg",
     "items": []
   },
   {
-    "retailer": "Picnpaylater",
-    "dates": "1 Nov - 31 Nov 2026",
+    "retailer": "Pick n Pay",
+    "dates": "9 Nov - 29 Nov 2026",
     "pdfUrl": "catalogues/picnpaylater.pdf",
     "fileName": "picnpaylater.pdf",
     "coverImage": "images/picnpay-cover.jpg",
