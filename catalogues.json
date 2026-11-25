@@ -828,3 +828,20 @@
       "zesty"
     ]
   },
+  {
+    "retailer": "Checkerslater",
+    "dates": "1 Nov - 31 Nov 2026",
+    "pdfUrl": "catalogues/checkerslater.pdf",
+    "fileName": "checkerslater.pdf",
+    "coverImage": "images/checkerslater-cover.jpg",
+    "items": []
+  },
+  {
+    "retailer": "Picnpaylater",
+    "dates": "1 Nov - 31 Nov 2026",
+    "pdfUrl": "catalogues/picnpaylater.pdf",
+    "fileName": "picnpaylater.pdf",
+    "coverImage": "images/picnpay-cover.jpg",
+    "items": []
+  }
+]
