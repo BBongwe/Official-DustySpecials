@@ -1,10 +1,10 @@
 [
   {
-    "retailer": "SPAR",
-    "dates": "09 Nov - 06 Dec 2026",
-    "pdfUrl": "catalogues/spar.pdf",
+    "retailer": "SPAR Black Friday",
+    "dates": "25 Nov - 29 Nov 2026",
+    "pdfUrl": "catalogues/sparblack.pdf",
     "fileName": "spar.pdf",
-    "coverImage": "images/spar-cover.jpg",
+    "coverImage": "images/sparblack-cover.jpg",
     "items": [
       "danone",
       "yoghurt",
@@ -20,11 +20,11 @@
     ]
   },
   {
-    "retailer": "Checkers Black Friday",
+     "retailer": "Checkers Black Friday",
     "dates": "26 Nov - 29 Nov 2026",
-    "pdfUrl": "catalogues/checkers.pdf",
-    "fileName": "checkers.pdf",
-    "coverImage": "images/checkers-cover.jpg",
+    "pdfUrl": "catalogues/checkersblack.pdf",
+    "fileName": "checkersblack.pdf",
+    "coverImage": "images/checkersblack-cover.jpg",
     "items": [
       "weet bix",
       "cereal",
@@ -87,11 +87,11 @@
     ]
   },
   {
-    "retailer": "Pick n Pay Black Friday",
+    "retailer": "Pick N Pay Black Friday",
     "dates": "26 Nov - 29 Nov 2026",
-    "pdfUrl": "catalogues/picnpay.pdf",
+    "pdfUrl": "catalogues/picnpayblack.pdf",
     "fileName": "picnpay.pdf",
-    "coverImage": "images/picnpay-cover.jpg",
+    "coverImage": "images/picknpayblack.jpg",
     "items": [
       "chicken",
       "drumsticks",
@@ -831,17 +831,25 @@
   {
     "retailer": "Checkers",
     "dates": "23 Nov - 06 Dec 2026",
-    "pdfUrl": "catalogues/checkerslater.pdf",
-    "fileName": "checkerslater.pdf",
-    "coverImage": "images/checkerslater-cover.jpg",
+    "pdfUrl": "catalogues/checkers.pdf",
+    "fileName": "checkers.pdf",
+    "coverImage": "images/checkers-cover.jpg",
     "items": []
   },
   {
-    "retailer": "Pick n Pay",
-    "dates": "9 Nov - 29 Nov 2026",
-    "pdfUrl": "catalogues/picnpaylater.pdf",
+    "retailer": "Pick N Pay",
+    "dates": "09 Nov - 29 Nov 2026",
+    "pdfUrl": "catalogues/picnpay.pdf",
     "fileName": "picnpaylater.pdf",
     "coverImage": "images/picnpay-cover.jpg",
+    "items": []
+  },
+  {
+    "retailer": "Spar",
+    "dates": "9 Nov - 06 Dec 2026",
+    "pdfUrl": "catalogues/spar.pdf",
+    "fileName": "sparlater.pdf",
+    "coverImage": "images/sparlater-cover.jpg",
     "items": []
   }
 ]
